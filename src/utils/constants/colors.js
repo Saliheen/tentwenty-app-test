@@ -1,0 +1,9 @@
+export const Onyx = "#2E2739";
+export const LavenderMist = "#F6F6FA";
+export const DustyMauve = "#827D88";
+export const SkyBlue = "#61C3F2";
+export const SilverMist = "#DBDBDF";
+export const TropicalTeal = "#15D2BC";
+export const RosyPink = "#E26CA5";
+export const IndigoBlue = "#564CA3";
+export const GoldenMustard = "#CD9D0F";
