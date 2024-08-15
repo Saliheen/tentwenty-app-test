@@ -8,9 +8,15 @@ import {
 import IMAGE_BASE_URL from "../../../utils/constants/imageBaseUrl";
 import { LinearGradient } from "expo-linear-gradient";
 
+import Animated, { FadeOut, FlipInEasyX } from "react-native-reanimated";
+
 const MainCard = ({ data }) => {
   return (
-    <View style={styles.container}>
+    <Animated.View
+      entering={FlipInEasyX}
+      exiting={FadeOut}
+      style={styles.container}
+    >
       <Image
         source={{
           uri: `${IMAGE_BASE_URL}${data?.backdrop_path}`,
@@ -28,7 +34,7 @@ const MainCard = ({ data }) => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>{data?.title}</Text>
       </View>
-    </View>
+    </Animated.View>
   );
 };
 

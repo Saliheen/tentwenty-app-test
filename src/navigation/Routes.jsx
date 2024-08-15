@@ -5,7 +5,7 @@ import More from "../screens/tabs/More";
 
 import { Onyx } from "../utils/constants/colors";
 
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -47,6 +47,7 @@ const TabStackScreens = () => {
         tabBarStyle: {
           ...styles.tabBarStyle,
         },
+        tabBarHideOnKeyboard: Platform.OS !== "ios",
       }}
     >
       <TabStack.Screen
