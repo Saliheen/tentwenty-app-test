@@ -3,6 +3,8 @@ import Watch from "../screens/tabs/Watch";
 import MediaLibrary from "../screens/tabs/MediaLibrary";
 import More from "../screens/tabs/More";
 
+import MovieDetails from "../screens/stack/MovieDetails";
+
 import { Onyx } from "../utils/constants/colors";
 
 import { View, Text, StyleSheet, Platform } from "react-native";
@@ -21,18 +23,17 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Foundation from "@expo/vector-icons/Foundation";
 
 const Stack = createNativeStackNavigator();
-const AuthStack = createNativeStackNavigator();
 const NormalStack = createNativeStackNavigator();
 const TabStack = createBottomTabNavigator();
 
 const NormalStackScreens = () => {
   return (
     <NormalStack.Navigator>
-      {/* <NormalStack.Screen
-        name="AddStock"
-        component={AddStock}
+      <NormalStack.Screen
+        name="MovieDetails"
+        component={MovieDetails}
         options={{ headerShown: false }}
-      /> */}
+      />
     </NormalStack.Navigator>
   );
 };

@@ -16,7 +16,7 @@ import Feather from "@expo/vector-icons/Feather";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 
-const Header = ({ onClick, isSearchVisible }) => {
+const Header = ({ onClick, isSearchVisible, onSearch, searchKeyword }) => {
   return (
     <View style={styles.container}>
       {!isSearchVisible ? (
@@ -40,6 +40,8 @@ const Header = ({ onClick, isSearchVisible }) => {
           <TextInput
             style={styles.textInput}
             placeholder="TV shows, movies and more"
+            value={searchKeyword}
+            onChangeText={onSearch}
           />
           <View style={styles.searchIcon} pointerEvents="none">
             <Feather name="search" size={24} color="black" />
